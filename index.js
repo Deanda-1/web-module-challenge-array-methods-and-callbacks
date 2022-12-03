@@ -13,19 +13,14 @@ const worldCupFinal = fifaData.filter(function(item) {
 console.log(worldCupFinal);
 
 //(a) Home Team name for 2014 world cup final
-console.log(worldCupFinal[0]['Home Team Name']);
 
 //(b) Away Team name for 2014 world cup final
-console.log(worldCupFinal[0]['Away Team Name']);
 
 //(c) Home Team goals for 2014 world cup final
-console.log(worldCupFinal[0]['Home Team Goals']);
 
 //(d) Away Team goals for 2014 world cup final
-console.log(worldCupFinal[0]['Away Team Goals']);
 
 //(e) Winner of 2014 world cup final */
-console.log(worldCupFinal[0]['Win conditions']);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use getFinals to do the following:
@@ -37,7 +32,7 @@ Use getFinals to do the following:
 
 function getFinals(data) {
     const teamFinal = data.filter(function(item) {
-        return item.stage === 'Final';
+        return item.Stage === 'Final';
     });
     return teamFinal;
  }
