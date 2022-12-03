@@ -92,16 +92,19 @@ Use the higher order function `getAverageGoals` to do the following:
 
  2. Calculate the AVERAGE number of the TOTAL home team goals AND TOTAL away team goals scored PER MATCH
 
- 3. Round to the second decimal place and return the value
+ 3. Round to the second decimal place and return the valueto
  
  💡 HINT: use .reduce, .toFixed (refer to MDN for syntax), and do this in 2 steps) 
  
 */
 
-function getAverageGoals(/* code here */) {
-    /* code here */
+function getAverageGoals(data, getFinalsCB) {
+   const homeGoals = data.reduce(function(acc, item) {
+    return acc + item['Home Team Goals'] + item['Away Team Goals']; 
+   }, 0)
+   return (homeGoals / data.length).toFixed(2);  
  }
-
+console.log(getAverageGoals(fifaData));
 
 
 
